@@ -1,6 +1,6 @@
 ### P4 BMv2 Implementation
 
-The BMv2 version of **LifeSketch** is implemented in [`./life.p4`](./life.p4) using the P4 language.
+The BMv2 implementation of **LifeSketch** is provided in [`./life.p4`](./life.p4) and is written in the P4 language. The demo uses a simple point-to-point topology consisting of two hosts and one switch (`h1-sw1-h2`).
 
 ---
 
@@ -8,35 +8,46 @@ The BMv2 version of **LifeSketch** is implemented in [`./life.p4`](./life.p4) us
 
 * Mininet (version ≥ 2.3.0)
 * BMv2/simple_switch (version ≥ 1.13.0)
-* gcc (version ≥ 5.4.0)
+* GCC (version ≥ 5.4.0)
 * Ubuntu 16.04
 
 ---
 
 ### Compilation and Execution
 
-We assume that the environment variable `$SDE` has been configured to point to the P4 SDE installation directory. You can compile, analyze, and run **LifeSketch** as follows:
+#### 1. Compile the P4 Program
 
-1. **Compile the P4 program**
-   Build `life.p4`, which contains the parser, ingress, egress, and deparser modules:
+Build `life.p4`, which contains the parser, ingress, egress, and deparser modules, and generate the corresponding `topology.db`:
 
-   ```bash
-   $SDE/p4_build.sh ./P4/life.p4
-   ```
+```bash
+$ cd p4src
+$ sudo p4run
+```
 
-2. **Inspect hardware resource usage**
-   To check the resource consumption on the Tofino switch:
+#### 2. Initialize LifeSketch
 
-   ```bash
-   $SDE/p4i.sh
-   ```
+Initialize the registers and RMT tables used by LifeSketch:
 
-   Afterward, open **p4insight** via the output port provided by the command.
+```bash
+$ cd ..
+$ chmod u+x ./start.sh
+$ ./start.sh
+```
 
-3. **Run LifeSketch**
-   Launch LifeSketch and enter the BFRT shell:
+#### 3. Send Packets from h1
 
-   ```bash
-   $SDE/run_switchd.sh -p life
-   ```
+Enter the h1 Mininet terminal and send packets to h2 through sw1:
 
+```bash
+$ mx h1
+$ python send.py
+```
+
+#### 4. Retrieve Active-Flow Counting Results
+
+Run the following script to retrieve the active-flow counting results:
+
+```bash
+$ chmod u+x get.sh
+$ ./get.sh
+```
