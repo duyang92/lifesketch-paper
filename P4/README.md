@@ -37,3 +37,6 @@ We assume that the environment variable `$SDE` has been configured to point to t
    $SDE/run_switchd.sh -p life
    ```
 
+### Simple Demo on the BMv2 Switch
+
+For a quick evaluation of LifeSketch, we provide a simple demo implemented on the P4 BMv2 switch in the demo folder.
