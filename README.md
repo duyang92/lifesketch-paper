@@ -30,9 +30,9 @@ Please note that the dataset needs to have its IP addresses converted to integer
 ```
 <timestamp> <source IP> <destination IP> <source port> <destination port> <operation>
 ```
-where `<operation>` is either 1 (for insertion) or 0 (for deletion).
+where `<operation>` is either 1 (for insertion) or 0 (for deletion), which is determined based on SYN/FIN signals.
 
-> Additionally, due to the large size of the original dataset, we don't include the original dataset in this repository.
+Due to the large size of the original dataset, we do not include it in this repository. Instead, we provide a small demo dataset in the data folder for illustration and testing.
 
 ### How to build
 
