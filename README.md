@@ -6,11 +6,11 @@ Accurate active flow counting is critical for network security and management ta
 
 ### About this repo
 
-The core **LifeSketch** structure is implemented in the **/headers** and **/sources** folders.
+The core **LifeSketch** structure is implemented in the **./Headers** and **./Sources** folders.
 
 Other baseline methods are also implemented in the same headers and sources directories.
 
-The dataset files are placed under the **/data** directory.
+The dataset files are placed under the **./data** directory.
 
 The main function is the **main.cpp** file.
 
