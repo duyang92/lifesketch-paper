@@ -6,6 +6,8 @@ Accurate active flow counting is critical for network security and management ta
 
 ### About this repo
 
+(1) Software version:
+
 The core **LifeSketch** structure is implemented in the **./Headers** and **./Sources** folders.
 
 Other baseline methods are also implemented in the same headers and sources directories.
@@ -17,6 +19,10 @@ The main function is the **main.cpp** file.
 The **main.sh** script is provided to compile and run the project conveniently.
 
 The **CMakeLists.txt** file is used for building the project with CMake.
+
+(2) Hardware version:
+
+We propose the P4 implementations of LifeSketch in the **./P4** folder.
 
 ### Requirements
 
