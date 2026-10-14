@@ -50,5 +50,7 @@ $./main.sh
 ```
 
 ```
-This repository reflects the exact version evaluated by the Artifact Evaluation Committee. The archived version of record is available on Zenodo via DOI: [10.5281/zenodo.23201840].
+This repository reflects the exact version evaluated by the Artifact Evaluation Committee.
+
+The archived version of record is available on Zenodo via DOI: [10.5281/zenodo.23201840](https://doi.org/10.5281/zenodo.23201840).
 ```
