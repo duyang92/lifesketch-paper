@@ -48,3 +48,7 @@ You can use the following commands to build and run.
 $ chmod u+x ./main.sh
 $./main.sh
 ```
+
+```
+This repository reflects the exact version evaluated by the Artifact Evaluation Committee. The archived version of record is available on Zenodo via DOI: [10.5281/zenodo.23201840].
+```
